@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>一个助理</title>
+    <meta charset="utf-8" 、>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#"><img src="https://cdn.wxnodes.cn/gpt/logo.png" alt="logo"></a>
+            <form action="#" method="get">
+                <h1>一个助理</h1>
+                <input class="search" type="text" name="search" placeholder="表达一下你的心情或想法">
+
+                <button type="submit">发送</button>
+            </form>
+            <div id="plugKey">
+                <span>APIKEY</span><input class="search" type="text" id="key" placeholder="输入可用的OPENAI APIKEY">
+            </div>
+            <div id="plug" style="display: none;">
+
+            </div>
+
+            <div id="resultNo" style="display: none;">
+                <div class="loading">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+            <div id="result">
+
+            </div>
+
+        </div>
+    </header>
+    <script src="j.js"></script>
+</body>
+
+</html>
