@@ -10,7 +10,8 @@
 <img width="1004" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/51239bd7-c513-41dc-ac82-9f981bd45e03">
 
 ## 新浪微博搜索，用iframe把微博页面引入
-<img width="971" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/940e81c4-032d-4a73-b856-9d0f7856d91b">
+<img width="950" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/075f3bdb-cf4a-4006-a257-19998092d22a">
+
 
 ## github搜索
 <img width="951" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/0b82477f-bd4e-4b06-ac0b-3b911df0debb">
