@@ -13,4 +13,7 @@
 <img width="971" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/940e81c4-032d-4a73-b856-9d0f7856d91b">
 
 ## github搜索
-<img width="963" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/33ccbd03-51cb-46b6-8ea7-f70f2ca61107">
+<img width="951" alt="image" src="https://github.com/minijoe/gptFun/assets/6988920/0b82477f-bd4e-4b06-ac0b-3b911df0debb">
+
+探讨可加微信：
+![6d05c22a8503805511e302783098f61d](https://github.com/minijoe/gptFun/assets/6988920/f11d2f57-2e4c-4fda-88a2-47df9c06ba52)
