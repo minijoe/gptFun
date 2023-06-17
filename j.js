@@ -35,14 +35,14 @@ function initAudio() {
     $('audio').each((i, e) => {
         $(e).on('play', () => {
             if (nowPlayAudio)
-                nowPlayAudio.stop()
+                nowPlayAudio.pause()
             nowPlayAudio = e
             nowPlayAudio.play()
         })
 
         $(e).on('ended', () => {
             if (nowPlayAudio)
-                nowPlayAudio.stop()
+                nowPlayAudio.pause()
             if ($('audio')[i + 1])
                 nowPlayAudio = $('audio')[i + 1]
             else
