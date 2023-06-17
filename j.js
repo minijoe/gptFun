@@ -30,24 +30,23 @@ function renderMusicList(data) {
  * 初始化音乐播放
  * @param {*} data 
  */
-var nowPlayAudio
+var nowPlayAudioIndex = 0
 function initAudio() {
     $('audio').each((i, e) => {
-        $(e).on('play', () => {
-            if (nowPlayAudio)
-                nowPlayAudio.pause()
-            nowPlayAudio = e
-            nowPlayAudio.play()
+        $(e).on('play', (e) => {
+            if ($('audio')[nowPlayAudioIndex] && $('audio')[nowPlayAudioIndex] != e.currentTarget)
+                $('audio')[nowPlayAudioIndex].pause()
+            nowPlayAudioIndex = i
+
+
         })
 
         $(e).on('ended', () => {
-            if (nowPlayAudio)
-                nowPlayAudio.pause()
-            if ($('audio')[i + 1])
-                nowPlayAudio = $('audio')[i + 1]
-            else
-                nowPlayAudio = $('audio')[0]
-            nowPlayAudio.play()
+            nowPlayAudioIndex++
+            if (!$('audio')[nowPlayAudioIndex])
+                nowPlayAudioIndex = 0
+
+            $('audio')[nowPlayAudioIndex].play()
         })
     })
     $('audio')[0].play()
