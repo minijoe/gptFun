@@ -154,7 +154,7 @@ button[type="submit"]:hover {
     flex-direction: column;
 }
 
-#result p {
+#result .p {
     font-size: 14px;
     vertical-align: middle;
     float: left;
@@ -481,7 +481,7 @@ h1 {
     border: 1px solid #999;
     padding: 7px;
     margin: -1px 0px 0 -1px;
-    width: 117px;
+    width: 155px;
     position: relative;
     left: 1px;
 }
@@ -520,7 +520,7 @@ h1 {
 
 
 #result .container2 {
-    background-color: #F5F5F5;
+    background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #BDBDBD;
     color: #333;
@@ -828,4 +828,55 @@ h1 {
 
 #icon-kPa {
     background: url(https://mat1.gtimg.com/qqcdn/tupload/1630660670106.png);
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.repo-list-item {
+    margin: 10px 0;
+    border-bottom: 1px dashed #999;
+    padding: 10px 0;
+    overflow: hidden;
+    border-radius: 6px;
+    border-color: rgb(48, 54, 61);
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.repo-list-item:hover {
+    background-color: #f5f5f5;
+}
+
+.repo-list-item .octicon-repo {
+    display: none;
+}
+
+.repo-list-item .f4 {
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.repo-list-item p {
+    margin-bottom: 5px;
+}
+
+.repo-list-item .Link--muted {
+    color: #586069;
+}
+
+.repo-language-color {
+    display: none;
+}
+
+.color-fg-muted {
+    display: none;
 }

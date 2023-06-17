@@ -138,18 +138,37 @@ function searchWeibo(op) {
 function searchGithub(op) {
     if (typeof op == 'string')
         op = JSON.parse(op)
-    var src = 'https://aiquickhelp.com/getGitHub.php?q=' + op.value + (op.page ? ('&p=' + op.page) : '')
+    var act = function (q, p) {
+        var src = 'https://aiquickhelp.com/gptFun/getGitHub.php?q=' + q + (p ? ('&p=' + p) : '')
 
-    $.ajax({
-        url: src,
-        success(e) {
-            var h = document.createElement("div")
-            h.innerHTML = e
-            $("#result").append($(h).find('[data-hpc]'))
-            $("#result").show()
-            $("#resultNo").hide()
-        }
-    })
+        $.ajax({
+            url: src,
+            success(e) {
+                var h = document.createElement("div")
+                h.innerHTML = e
+                var d = $(h).find('[data-hpc]')
+                d.find('.repo-list a,details a').click((e) => {
+                    e.preventDefault()
+                    open(e.currentTarget.href.replace('https://aiquickhelp.com/', 'https://github.com/'))
+                })
+                d.find('.paginate-container a').click((e) => {
+                    e.preventDefault()
+                    $("#result")[0].innerHTML = ''
+
+                    const regex = /[\?&]p=([^&#]*)/.exec(e.currentTarget.href);
+                    const page = regex === null ? "" : regex[1];
+                    act(q, page)
+                })
+                $("#result").append(d)
+                $("#result").show()
+                $("#resultNo").hide()
+            }
+        })
+    }
+
+    act(op.value, op.page)
+
+
 
 
 
@@ -163,7 +182,7 @@ function searchWheather(op) {
         op = JSON.parse(op)
     $("#resultNo").show()
     $.ajax({
-        url: 'https://aiquickhelp.com/getWeather.php?city=' + (op.city || '深圳') + (op.province ? ('&province=' + op.province) : ''),
+        url: 'https://aiquickhelp.com/gptFun/getWeather.php?city=' + (op.city || '深圳') + (op.province ? ('&province=' + op.province) : ''),
         success(e) {
             e = JSON.parse(e)
             console.log(e);
@@ -214,7 +233,7 @@ $('form').on('submit', (e) => {
             'Content-Type': 'application/json'
         },
         data: JSON.stringify({
-            model: 'gpt-3.5-turbo-16k',
+            model: 'gpt-3.5-turbo-16k-0613',
             messages: [
                 {
                     "role": "system",
