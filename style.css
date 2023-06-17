@@ -154,7 +154,7 @@ button[type="submit"]:hover {
     flex-direction: column;
 }
 
-#result .p {
+#result .music p {
     font-size: 14px;
     vertical-align: middle;
     float: left;
