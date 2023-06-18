@@ -64,7 +64,8 @@ form {
     align-items: center;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
     width: 818px;
     height: 30px;
     padding: 5px;
